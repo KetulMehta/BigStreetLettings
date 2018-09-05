@@ -1,0 +1,289 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Client.master.cs" Inherits="Ext_RealEstate.Client.Client" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Flatize - Shop HTML5 Responsive Template">
+    <meta name="author" content="pixelgeeklab.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Street Lettings</title>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Rochester' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libs CSS -->
+    <link href="css/fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.carousel.css" media="screen">
+    <link rel="stylesheet" href="vendor/owl-carousel/owl.theme.css" media="screen">
+    <link rel="stylesheet" href="vendor/flexslider/flexslider.css" media="screen">
+    <link rel="stylesheet" href="vendor/chosen/chosen.css" media="screen">
+
+    <!-- Theme -->
+    <link href="css/theme-animate.css" rel="stylesheet">
+    <link href="css/theme-elements.css" rel="stylesheet">
+    <link href="css/theme-blog.css" rel="stylesheet">
+    <link href="css/theme-map.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
+
+    <!-- Style Switcher-->
+    <link rel="stylesheet" href="style-switcher/css/style-switcher.css">
+    <link href="css/colors/red/style.html" rel="stylesheet" id="layoutstyle">
+
+    <!-- Theme Responsive-->
+    <link href="css/theme-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div id="top">
+                <div class="container">
+                    <p class="pull-left text-note hidden-xs"><i class="fa fa-phone"></i>VGEC Project</p>
+                    <ul class="nav nav-pills nav-top navbar-right">
+                        <li class="login"><a href="javascript:void(0);"><i class="fa fa-user"></i></a></li>
+                        <li><a href="#" title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Email"><i class="fa fa-envelope-o"></i></a></li>
+                        <li><a href="#" title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" title="" data-placement="bottom" data-toggle="tooltip" data-original-title="Google+"><i class="fa fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav class="navbar navbar-default pgl-navbar-main" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                        <a class="logo" href="default.aspx">
+                           
+                        <img src="images/dream-logo.png" />
+                             </a>
+                    </div>
+
+                    <div class="navbar-collapse collapse width">
+                        <ul class="nav navbar-nav pull-right">
+
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><asp:Label ID="lbl_user" runat="server"></asp:Label></a>
+                                 <ul class="dropdown-menu">
+                                     <li><a href="addproperty.aspx">Add Property</a></li>
+                                     <li><a href="Userupdate.aspx">Update Details</a></li>
+                                     <li><a href="#">Change Password</a></li>
+                                        <li><a href="signout.aspx">Signout</a></li>
+                                     </ul>
+                                </li>
+                            <li class="dropdown"><a href="default.aspx" data-target="#" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+                                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Deals</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="list.aspx">List View</a></li>
+                                        <li><a href="grid.aspx">Grid View</a></li>
+                                        <li><a href="list-map.aspx">Map View</a></li>
+                                    </ul>
+                                </li>
+                                <%--<li>Live Deals</></li>
+                                <ul class="dropdown-menu">
+                                    <li><a href="list.aspx">List View</a></li>
+                                    <li><a href="grid.aspx">Grid View</a></li>
+                                    <li><a href="list-map.aspx">Map View</a></li>
+                                </ul>--%>
+                            </li>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Properties</a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-target="#" data-toggle="dropdown">LandLords</a>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown"><a class="dropdown-toggle" data-target="#" data-toggle="dropdown" href="grid-fullwidth-3-column.html">LandLords Guide</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">For Renting</a></li>
+                                                    <li><a href="#">For Selling</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Register Your Property</a></li>
+                                            <li><a href="#">Arrange a Valuation</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="list.aspx">Rent a Property</a></li>
+                                    <li><a href="list.aspx">Buy a Property</a></li>
+                                    <li><a href="#">Tenants Guide</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">User</a>
+                                <ul class="dropdown-menu">
+                            <li><a href="user_login.aspx">Sign-in</a></li>
+                                    <li><a href="user_registration.aspx">Register</a></li>
+                                       
+                                </ul>
+                            </li>
+
+                           <%-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Agents</a>
+                                <ul class="dropdown-menu">
+                            <li><a href="agent_signin.aspx">Agent Signin</a></li>
+                                    <li><a href="agentregistration.aspx">Agent Register</a></li>
+                                            <li><a href="ouragents.aspx">Our Agents</a></li>
+                                    <li><a href="agentsprofile.aspx">Agent Profile</a></li>
+                                </ul>
+                            </li>--%>
+                            <%--<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="about-us.html">About Us</a></li>
+                                    <li><a href="faq-sidebar.html">FAQs</a></li>
+                                    <li><a href="page-404.html">404-page</a></li>
+                                </ul>
+                            </li>--%>
+                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Join Us</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Maintainance.aspx">Maintainence</a></li>
+                                    <li><a href="Legal_Procedures.aspx">Legal Procedures</a></li>
+                                    <li><a href="Insurance.aspx">Insurance</a></li>
+                                    <li><a href="Advisor.aspx">Advisor</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li><a href="contact.aspx">Contact Us</a></li>
+                          
+                        </ul>
+                    </div>
+                    <!--/.nav-collapse -->
+                </div>
+                <!--/.container-fluid -->
+            </nav>
+        </header>
+
+        <div role="form" id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- Begin footer -->
+            <footer class="pgl-footer">
+                <div class="container">
+                    <div class="pgl-upper-foot">
+                        <div class="row">
+                            <asp:Repeater ID="Contact" runat="server">
+                                <ItemTemplate>
+                            <div class="col-sm-4">
+                                <h2>Contact detail</h2>
+                                <h3> <%#Eval("Name") %></h3>                                
+                                <%--<p> <%#Eval("Phone_Number") %></p>--%>
+                                <address>
+                                    <i class="fa fa-map-marker"></i>Office :  <%#Eval("Phone_Number") %><br>
+                                    <i class="fa fa-phone"></i>Mobile :  <%#Eval("Mobile_Number") %><br>
+                                    <i class="fa fa-fax"></i>Fax :  <%#Eval("Fax") %><br>
+                                    <i class="fa fa-envelope-o"></i>Mail: <a href="projects@realestate.com"> <%#Eval("Email") %></a>
+                                </address>
+                            </div>
+                                </ItemTemplate>
+                                </asp:Repeater>
+                            <div class="col-sm-2">
+                                <h2>Useful links</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Help and FAQs</a></li>
+                                    <li><a href="#">Home Price</a></li>
+                                    <li><a href="#">Market View</a></li>
+                                    <li><a href="#">Free Credit Report</a></li>
+                                    <li><a href="#">Terms and Conditions</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Community Guidelines</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2">
+                                <h2>Pages</h2>
+                                <ul class="list-unstyled">
+                                    <li><a href="#">Font &amp; Color</a></li>
+                                    <li><a href="#">Blogs</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Advanced Search</a></li>
+                                    <li><a href="#">Property Custom Field</a></li>
+                                    <li><a href="#">Google Map</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4">
+                                <h2>Don’t miss out</h2>
+                                <p>Please Register yourself for daily updates and schemes.</p>
+                                <div role="form" class="form-inline pgl-form-newsletter" role="form">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="exampleInputEmail2">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter your email here" />
+                                    </div>
+                                    <button type="submit" class="btn btn-submit"><i class="icons icon-submit"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pgl-copyrights">
+                        <p>Copyright © 2017 RealEstaste for Final Year Project VGEC.</p>
+                    </div>
+                </div>
+            </footer>
+            <!-- End footer -->
+        </div>
+    </div>
+    <%-- </form>--%>
+    <!-- Begin Style Switcher -->
+    <div id="style-switcher">
+        <div id="toggle_button"><a href="#"><i class="fa fa-pencil"></i></a></div>
+        <div id="style-switcher-menu">
+            <h4 class="text-center">Style Switcher</h4>
+            <div class="segment">
+                <ul class="theme cookie_layout_style level-0" id="bd_value">
+                    <li><a style="background: #36c" title="colors/blue/style" href="#"></a></li>
+                    <li><a style="background: #8a745f" title="colors/brown/style" href="#"></a></li>
+                    <li><a style="background: #8bc473" title="colors/green/style" href="#"></a></li>
+                    <li><a style="background: #f9b256" title="colors/orange/style" href="#"></a></li>
+                    <li><a style="background: #4dbfd9" title="colors/cyan/style" href="#"></a></li>
+                    <li><a style="background: #c578c8" title="colors/violet/style" href="#"></a></li>
+                </ul>
+            </div>
+            <div class="segment">
+                <div id="reset"><a href="#" class="btn btn-sm reset">Reset</a> </div>
+            </div>
+        </div>
+    </div>
+    <!-- Begin Style Switcher -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="vendor/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=true"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/owl-carousel/owl.carousel.js"></script>
+    <script src="vendor/flexslider/jquery.flexslider-min.js"></script>
+    <script src="vendor/chosen/chosen.jquery.min.js"></script>
+    <script src="vendor/masonry/imagesloaded.pkgd.min.js"></script>
+    <script src="vendor/masonry/masonry.pkgd.min.js"></script>
+    <script src="vendor/gmap/gmap3.infobox.min.js"></script>
+    <script src="vendor/gmap/markerclusterer.min.js"></script>
+    <script src="vendor/gmap/variables.js"></script>
+    <script src="vendor/gmap/properties.js"></script>
+    <script src="vendor/gmap/script.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            "use strict";
+
+            $(document).ready(function () {
+                //Create porperties map
+                PGL.propertiesMap(properties, 'properties_map');
+            });
+        })(jQuery);
+	</script>
+
+    <!-- Theme Initializer -->
+    <script src="js/theme.plugins.js"></script>
+    <script src="js/theme.js"></script>
+
+    <%--    <!-- Style Switcher -->
+    <script type="text/javascript" src="style-switcher/js/switcher.js"></script>--%>
+</body>
+</html>

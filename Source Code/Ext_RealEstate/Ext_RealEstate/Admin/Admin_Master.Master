@@ -1,0 +1,438 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin_Master.master.cs" Inherits="Ext_RealEstate.Admin.Admin_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <title>Big Street Lettings Admin</title>
+
+    <link href="css/style.default.css" rel="stylesheet" />
+    <link href="css/morris.css" rel="stylesheet" />
+    <link href="css/select2.css" rel="stylesheet" />
+
+    <link href="css/style.datatables.css" rel="stylesheet" />
+    <link href="css/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="css/dataTables.responsive.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <div role="form" id="form1" runat="server">
+
+        <div>
+            <header>
+                <div class="headerwrapper">
+                    <div class="header-left">
+                        <a href="default.aspx" class="logo">
+                            <img src="images/logo-3.png" height="30px" width="140px" />
+                            <%--<img src="images/logo-dark.png" height="30px" width="100px" />--%>
+                            <%--<img src="images/realestate.png" height="30px" width="100px" />--%>
+                            <%--<img src="css/images/realestate.png"--%>
+                            <%--<img src="css/images/download.jpg" width="80px" height="40px" />--%>
+                            <%--<img src="images/download.png" width="40px" height="40px" />--%>
+                            <%--<img src="images/prettyphoto/Real-Estate-Investment-Dropping.jpg" width="40px" height="40px" />--%> 
+                        </a>
+                        <%--<h1 style=" font-size:larger; color:white" >Real Estate</h1>--%>
+                        <div class="pull-right">
+                            <a href="#" class="menu-collapse">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- header-left -->
+
+                    <div class="header-right">
+
+                        <div class="pull-right">
+
+
+                            <div class="btn-group btn-group-option">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span>Admin</span>
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <ul class="dropdown-menu pull-right"  role="menu">
+                                    <li><a href="Password.aspx"><i class="glyphicon glyphicon-user"></i>Change Password</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="logout.aspx"><i class="glyphicon glyphicon-log-out"></i>Sign Out</a></li>
+                                </ul>
+                            </div>
+                            <!-- btn-group -->
+
+                        </div>
+                        <!-- pull-right -->
+
+                    </div>
+                    <!-- header-right -->
+
+                </div>
+                <!-- headerwrapper -->
+            </header>
+
+            <section>
+                <div class="mainwrapper">
+                    <div class="leftpanel">
+                        <div class="media profile-left">
+                            <a class="pull-left profile-thumb" href="../Client/default.aspx">
+                                <img class="img-circle" src="images/photos/user5.png" alt="" />
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">Ketul Mehta</h4>
+                                <small class="text-muted">Property Dealer</small>
+                            </div>
+                        </div>
+                        <!-- media -->
+
+                        <h3 class="leftpanel-title" style="font-family: Arial; text-align: center"><b>Navigation Menu</b></h3>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li id="default" ><a href="default.aspx"><i class="fa fa-home"></i><span>Dashboard</span></a></li>
+                            <li class="parent" id="master"><a href="#"><i class="fa fa-user"></i><span>Master</span></a>
+                                <ul class="children">
+                                    <li id="slider"><a href="Slider.aspx">Slider</a></li>
+                                    <li id="testimonial"><a href="Testimonial.aspx">Testimonial</a></li>
+                                </ul>
+                            </li>
+                            <li id="companyprofile"><a href="Company_Profile.aspx"><i class="fa fa-users"></i><span>Company Profile</span></a></li>
+
+                            <%-- <li class="parent"><a href="#"><i class="fa fa-user-circle"></i> <span>User</span></a>
+                                 <ul class="children" >
+                                    <li><a href="#">User Registration</a></li>
+                                    <li><a href="#">Company Registration</a></li>
+                                    <li><a href="#">Member Registration</a></li>
+                                </ul>
+                            </li>--%>
+                            <li class="parent" id="locality"><a href="#"><i class="fa fa-map-marker"></i><span>Locality</span></a>
+                                <ul class="children">
+                                    <li><a href="Country.aspx">Country</a></li>
+                                    <li><a href="State.aspx">State</a></li>
+                                    <li><a href="City.aspx">City</a></li>
+                                    <li><a href="Area.aspx">Area</a></li>
+                                </ul>
+
+                            </li>
+                            <li id="propertytype"><a href="Property_Type.aspx"><i class="fa fa-building"></i><span>Property Type</span></a></li>
+                            <li id="renttype"><a href="RentType.aspx"><i class="fa fa-money"></i><span>Rent Type</span></a></li>
+                            <li id="property"><a href="PropertyMain.aspx"><i class="fa fa-university"></i><span>Property</span></a>
+                                <%-- <ul  class="children">
+                                    <li><a href="Country.aspx">Property Master</a></li>
+                                    <li><a href="State.aspx">Property Details</a></li>
+                                    <li><a href="City.aspx">Property Specification</a></li>
+                                </ul>--%>
+                            </li>
+
+
+
+
+
+                            <%--<li><a href="maps.html"><i class="fa fa-key"></i><span>Change Password</span></a></li>--%>
+                            <li id="contact"><a href="Contact.aspx"><i class="fa fa-mobile"></i><span>Contact Inquiry</span></a></li>
+
+
+
+                        </ul>
+
+                    </div>
+                    <!-- leftpanel -->
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+     <script>
+         $(document).ready(function () {
+             $('ul li').click(function () {
+                 $('li').removeClass("active");
+                 $(this).addClass("active");
+             });
+         });</script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.min.js"></script>
+    <script src="js/pace.min.js"></script>
+    <script src="js/retina.min.js"></script>
+    <script src="js/jquery.cookies.js"></script>
+    <script src="js/jquery-ui-1.10.3.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/fullcalendar.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+
+    <script src="js/flot/jquery.flot.min.js"></script>
+    <script src="js/flot/jquery.flot.resize.min.js"></script>
+    <script src="js/flot/jquery.flot.spline.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/morris.min.js"></script>
+    <script src="js/raphael-2.1.0.min.js"></script>
+    <script src="js/bootstrap-wizard.min.js"></script>
+
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/dataTables.responsive.js"></script>
+
+    <script src="js/select2.min.js"></script>
+    <script src="js/jquery.gritter.min.js"></script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/dashboard.js"></script>
+    
+
+    <script>
+
+        jQuery(document).ready(function () {
+
+            jQuery('#growl1').click(function () {
+
+                jQuery.gritter.add({
+                    // (string | mandatory) the heading of the notification
+                    title: 'This is a regular notice!',
+                    // (string | mandatory) the text inside the notification
+                    text: 'This will fade out after a certain amount of time.',
+                    // (string | optional) the image to display on the left
+                    image: 'images/screen.png',
+                    // (bool | optional) if you want it to fade out on its own or just sit there
+                    sticky: false,
+                    // (int | optional) the time you want it to be alive for before fading out
+                    time: ''
+                });
+
+                return false;
+
+            });
+
+            jQuery('#growl2').click(function () {
+                jQuery.gritter.add({
+                    title: 'This is a regular notice!',
+                    text: 'This will fade out after a certain amount of time.',
+                    sticky: false,
+                    time: ''
+                });
+                return false;
+            });
+
+            jQuery('#growl-primary').click(function () {
+                jQuery.gritter.add({
+                    title: 'This is a regular notice!',
+                    text: 'This will fade out after a certain amount of time.',
+                    class_name: 'growl-primary',
+                    image: 'images/screen.png',
+                    sticky: false,
+                    time: ''
+                });
+                return false;
+            });
+
+            jQuery('#growl-success').click(function () {
+                jQuery.gritter.add({
+                    title: 'This is a regular notice!',
+                    text: 'This will fade out after a certain amount of time.',
+                    class_name: 'growl-success',
+                    image: 'images/screen.png',
+                    sticky: false,
+                    time: ''
+                });
+                return false;
+            });
+
+            jQuery('#growl-warning').click(function () {
+                jQuery.gritter.add({
+                    title: 'This is a regular notice!',
+                    text: 'This will fade out after a certain amount of time.',
+                    class_name: 'growl-warning',
+                    image: 'images/screen.png',
+                    sticky: false,
+                    time: ''
+                });
+                return false;
+            });
+
+            jQuery('#growl-danger').click(function () {
+                jQuery.gritter.add({
+                    title: 'This is a regular notice!',
+                    text: 'This will fade out after a certain amount of time.',
+                    class_name: 'growl-danger',
+                    image: 'images/screen.png',
+                    sticky: false,
+                    time: ''
+                });
+                return false;
+            });
+
+            jQuery('#growl-info').click(function () {
+                jQuery.gritter.add({
+                    title: 'This is a regular notice!',
+                    text: 'This will fade out after a certain amount of time.',
+                    class_name: 'growl-info',
+                    image: 'images/screen.png',
+                    sticky: false,
+                    time: ''
+                });
+                return false;
+            });
+
+            jQuery('.delete-row').click(function () {
+                var c = confirm("Continue delete?");
+                if (c)
+                    jQuery(this).closest('tr').fadeOut(function () {
+                        jQuery(this).remove();
+                    });
+                return false;
+            });
+
+
+
+            // Show aciton upon row hover
+            jQuery('.table tbody tr').hover(function () {
+                jQuery(this).find('.table-action-hide a').animate({ opacity: 1 }, 100);
+            }, function () {
+                jQuery(this).find('.table-action-hide a').animate({ opacity: 0 }, 100);
+            });
+            /* initialize the external events */
+            jQuery('#external-events div.external-event').each(function () {
+
+                // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+                // it doesn't need to have a start or end
+                var eventObject = {
+                    title: $.trim($(this).text()) // use the element's text as the event title
+                };
+
+                // store the Event Object in the DOM element so we can get to it later
+                jQuery(this).data('eventObject', eventObject);
+
+                // make the event draggable using jQuery UI
+                jQuery(this).draggable({
+                    zIndex: 999,
+                    revert: true,      // will cause the event to go back to its
+                    revertDuration: 0  //  original position after the drag
+                });
+            });
+
+            /* initialize the external events */
+            jQuery('#external-events div.external-event').each(function () {
+
+                // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+                // it doesn't need to have a start or end
+                var eventObject = {
+                    title: $.trim($(this).text()) // use the element's text as the event title
+                };
+
+                // store the Event Object in the DOM element so we can get to it later
+                jQuery(this).data('eventObject', eventObject);
+
+                // make the event draggable using jQuery UI
+                jQuery(this).draggable({
+                    zIndex: 999,
+                    revert: true,      // will cause the event to go back to its
+                    revertDuration: 0  //  original position after the drag
+                });
+            });
+
+            jQuery('#basicTable').DataTable({
+                responsive: true
+            });
+
+            var shTable = jQuery('#shTable').DataTable({
+                "fnDrawCallback": function (oSettings) {
+                    jQuery('#shTable_paginate ul').addClass('pagination-active-dark');
+                },
+                responsive: true
+            });
+
+            // Show/Hide Columns Dropdown
+            jQuery('#shCol').click(function (event) {
+                event.stopPropagation();
+            });
+
+            jQuery('#shCol input').on('click', function () {
+
+                // Get the column API object
+                var column = shTable.column($(this).val());
+
+                // Toggle the visibility
+                if ($(this).is(':checked'))
+                    column.visible(true);
+                else
+                    column.visible(false);
+            });
+
+            var exRowTable = jQuery('#exRowTable').DataTable({
+                responsive: true,
+                "fnDrawCallback": function (oSettings) {
+                    jQuery('#exRowTable_paginate ul').addClass('pagination-active-success');
+                },
+                "ajax": "ajax/objects.txt",
+                "columns": [
+                    {
+                        "class": 'details-control',
+                        "orderable": false,
+                        "data": null,
+                        "defaultContent": ''
+                    },
+                    { "data": "name" },
+                    { "data": "position" },
+                    { "data": "office" },
+                    { "data": "salary" }
+                ],
+                "order": [[1, 'asc']]
+            });
+
+            // Add event listener for opening and closing details
+            jQuery('#exRowTable tbody').on('click', 'td.details-control', function () {
+                var tr = $(this).closest('tr');
+                var row = exRowTable.row(tr);
+
+                if (row.child.isShown()) {
+                    // This row is already open - close it
+                    row.child.hide();
+                    tr.removeClass('shown');
+                }
+                else {
+                    // Open this row
+                    row.child(format(row.data())).show();
+                    tr.addClass('shown');
+                }
+            });
+
+
+            // DataTables Length to Select2
+            jQuery('div.dataTables_length select').removeClass('form-control input-sm');
+            jQuery('div.dataTables_length select').css({ width: '60px' });
+            jQuery('div.dataTables_length select').select2({
+                minimumResultsForSearch: -1
+            });
+
+        });
+
+        function format(d) {
+            // `d` is the original data object for the row
+            return '<table class="table table-bordered nomargin">' +
+                '<tr>' +
+                    '<td>Full name:</td>' +
+                    '<td>' + d.name + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                    '<td>Extension number:</td>' +
+                    '<td>' + d.extn + '</td>' +
+                '</tr>' +
+                '<tr>' +
+                    '<td>Extra info:</td>' +
+                    '<td>And any further details here (images etc)...</td>' +
+                '</tr>' +
+            '</table>';
+        }
+            </script>
+   <script src="js/menualert.js"></script>
+
+    <script>
+        window.onload = active();
+    </script>
+</body>
+</html>

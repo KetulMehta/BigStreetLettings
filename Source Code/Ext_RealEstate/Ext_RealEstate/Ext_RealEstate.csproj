@@ -1,0 +1,834 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{618FA501-F2E0-477E-B150-59AC45BB6A47}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ext_RealEstate</RootNamespace>
+    <AssemblyName>Ext_RealEstate</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\ajax\accordion.html" />
+    <Content Include="Admin\ajax\panel.html" />
+    <Content Include="Admin\ajax\remote.html" />
+    <Content Include="Admin\ajax\tabs.html" />
+    <Content Include="Admin\Area.aspx" />
+    <Content Include="Admin\buttons.aspx" />
+    <Content Include="Admin\changepassword.aspx" />
+    <Content Include="Admin\City.aspx" />
+    <Content Include="Admin\Company_Profile.aspx" />
+    <Content Include="Admin\Contact.aspx" />
+    <Content Include="Admin\Country.aspx" />
+    <Content Include="Admin\css\animate.delay.css" />
+    <Content Include="Admin\css\animate.min.css" />
+    <Content Include="Admin\css\bootstrap-override.css" />
+    <Content Include="Admin\css\bootstrap-timepicker.min.css" />
+    <Content Include="Admin\css\bootstrap-wysihtml5.css" />
+    <Content Include="Admin\css\bootstrap.min.css" />
+    <Content Include="Admin\css\codemirror\codemirror.css" />
+    <Content Include="Admin\css\codemirror\theme\ambiance.css" />
+    <Content Include="Admin\css\colorpicker.css" />
+    <Content Include="Admin\css\dataTables.bootstrap.css" />
+    <Content Include="Admin\css\dataTables.responsive.css" />
+    <Content Include="Admin\css\dropzone.css" />
+    <Content Include="Admin\css\font-awesome.min.css" />
+    <Content Include="Admin\css\fullcalendar.css" />
+    <Content Include="Admin\css\images\animated-overlay.html" />
+    <Content Include="Admin\css\images\download.jpg" />
+    <Content Include="Admin\css\images\realestate.png" />
+    <Content Include="Admin\css\images\_div style=.html" />
+    <Content Include="Admin\css\jquery-ui-1.10.3.css" />
+    <Content Include="Admin\css\jquery.gritter.css" />
+    <Content Include="Admin\css\jquery.tagsinput.css" />
+    <Content Include="Admin\css\morris.css" />
+    <Content Include="Admin\css\pace.css" />
+    <Content Include="Admin\css\prettyPhoto.css" />
+    <Content Include="Admin\css\select2.css" />
+    <Content Include="Admin\css\style.calendar.css" />
+    <Content Include="Admin\css\style.datatables.css" />
+    <Content Include="Admin\css\style.default.css" />
+    <Content Include="Admin\css\toggles.css" />
+    <Content Include="Admin\css\weather-icons.min.css" />
+    <Content Include="Admin\default.aspx" />
+    <Content Include="Admin\fonts\fontawesome-webfont862f.svg" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Admin\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Admin\holder.js\100x100.html" />
+    <Content Include="Admin\holder.js\100x120.html" />
+    <Content Include="Admin\holder.js\60x60.html" />
+    <Content Include="Admin\holder.js\_div style=.html" />
+    <Content Include="Admin\images\calendar-arrow.png" />
+    <Content Include="Admin\images\close-white.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_background.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_hex.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_hsb_b.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_hsb_h.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_hsb_s.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_indic.gif" />
+    <Content Include="Admin\images\colorpicker\colorpicker_overlay.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_rgb_b.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_rgb_g.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_rgb_r.png" />
+    <Content Include="Admin\images\colorpicker\colorpicker_select.gif" />
+    <Content Include="Admin\images\colorpicker\colorpicker_submit.png" />
+    <Content Include="Admin\images\colorpicker\select2.png" />
+    <Content Include="Admin\images\datatables\sort_asc.png" />
+    <Content Include="Admin\images\datatables\sort_desc.png" />
+    <Content Include="Admin\images\newprop1.jpg" />
+    <Content Include="Admin\images\newprop2.jpg" />
+    <Content Include="Admin\images\newprop3.jpg" />
+    <Content Include="Admin\images\newprop4.jpg" />
+    <Content Include="Admin\images\property2.jpg" />
+    <Content Include="Admin\images\property1.jpg" />
+    <Content Include="Admin\images\download.png" />
+    <Content Include="Admin\images\droparrows.png" />
+    <Content Include="Admin\images\dropdown-arrow.png" />
+    <Content Include="Admin\images\loaders\loader1.gif" />
+    <Content Include="Admin\images\loaders\loader10.gif" />
+    <Content Include="Admin\images\loaders\loader11.gif" />
+    <Content Include="Admin\images\loaders\loader12.gif" />
+    <Content Include="Admin\images\loaders\loader13.gif" />
+    <Content Include="Admin\images\loaders\loader14.gif" />
+    <Content Include="Admin\images\loaders\loader15.gif" />
+    <Content Include="Admin\images\loaders\loader16.gif" />
+    <Content Include="Admin\images\loaders\loader17.gif" />
+    <Content Include="Admin\images\loaders\loader18.gif" />
+    <Content Include="Admin\images\loaders\loader19.gif" />
+    <Content Include="Admin\images\loaders\loader2.gif" />
+    <Content Include="Admin\images\loaders\loader20.gif" />
+    <Content Include="Admin\images\loaders\loader21.gif" />
+    <Content Include="Admin\images\loaders\loader22.gif" />
+    <Content Include="Admin\images\loaders\loader23.gif" />
+    <Content Include="Admin\images\loaders\loader24.gif" />
+    <Content Include="Admin\images\loaders\loader25.gif" />
+    <Content Include="Admin\images\loaders\loader26.gif" />
+    <Content Include="Admin\images\loaders\loader27.gif" />
+    <Content Include="Admin\images\loaders\loader28.gif" />
+    <Content Include="Admin\images\loaders\loader29.gif" />
+    <Content Include="Admin\images\loaders\loader3.gif" />
+    <Content Include="Admin\images\loaders\loader30.gif" />
+    <Content Include="Admin\images\loaders\loader4.gif" />
+    <Content Include="Admin\images\loaders\loader5.gif" />
+    <Content Include="Admin\images\loaders\loader6.gif" />
+    <Content Include="Admin\images\loaders\loader7.gif" />
+    <Content Include="Admin\images\loaders\loader8.gif" />
+    <Content Include="Admin\images\loaders\loader9.gif" />
+    <Content Include="Admin\images\logo-3.png" />
+    <Content Include="Admin\images\logo-dark.png" />
+    <Content Include="Admin\images\logo-primary.png" />
+    <Content Include="Admin\images\property3.jpg" />
+    <Content Include="Admin\images\property4.jpg" />
+    <Content Include="Admin\images\real-estate-logo-3-01.jpg" />
+    <Content Include="Admin\images\realestate.png" />
+    <Content Include="Admin\images\photos\media-audio.png" />
+    <Content Include="Admin\images\photos\media-doc.png" />
+    <Content Include="Admin\images\photos\media1.jpg" />
+    <Content Include="Admin\images\photos\media2.png" />
+    <Content Include="Admin\images\photos\media3.png" />
+    <Content Include="Admin\images\photos\media4.png" />
+    <Content Include="Admin\images\photos\media5.png" />
+    <Content Include="Admin\images\photos\media6.png" />
+    <Content Include="Admin\images\photos\media7.png" />
+    <Content Include="Admin\images\photos\profile-big.jpg" />
+    <Content Include="Admin\images\photos\profile.png" />
+    <Content Include="Admin\images\photos\user1.png" />
+    <Content Include="Admin\images\photos\user2.png" />
+    <Content Include="Admin\images\photos\user3.png" />
+    <Content Include="Admin\images\photos\user4.png" />
+    <Content Include="Admin\images\photos\user5.png" />
+    <Content Include="Admin\images\prettyphoto\dark_rounded\btnNext.html" />
+    <Content Include="Admin\images\prettyphoto\dark_rounded\btnPrevious.html" />
+    <Content Include="Admin\images\prettyphoto\dark_rounded\contentPattern.html" />
+    <Content Include="Admin\images\prettyphoto\dark_rounded\loader.html" />
+    <Content Include="Admin\images\prettyphoto\dark_rounded\sprite.html" />
+    <Content Include="Admin\images\prettyphoto\dark_rounded\_div style=.html" />
+    <Content Include="Admin\images\prettyphoto\dark_square\btnNext.html" />
+    <Content Include="Admin\images\prettyphoto\dark_square\btnPrevious.html" />
+    <Content Include="Admin\images\prettyphoto\dark_square\loader.html" />
+    <Content Include="Admin\images\prettyphoto\dark_square\sprite.html" />
+    <Content Include="Admin\images\prettyphoto\dark_square\_div style=.html" />
+    <Content Include="Admin\images\prettyphoto\default_thumb.png" />
+    <Content Include="Admin\images\prettyphoto\facebook\btnNext.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\btnPrevious.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\contentPatternBottom.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\contentPatternLeft.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\contentPatternRight.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\contentPatternTop.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\default_thumbnail.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\loader.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\sprite.html" />
+    <Content Include="Admin\images\prettyphoto\facebook\_div style=.html" />
+    <Content Include="Admin\images\prettyphoto\light_rounded\btnNext.html" />
+    <Content Include="Admin\images\prettyphoto\light_rounded\btnPrevious.html" />
+    <Content Include="Admin\images\prettyphoto\light_rounded\loader.html" />
+    <Content Include="Admin\images\prettyphoto\light_rounded\sprite.html" />
+    <Content Include="Admin\images\prettyphoto\light_rounded\_div style=.html" />
+    <Content Include="Admin\images\prettyphoto\light_square\btnNext.html" />
+    <Content Include="Admin\images\prettyphoto\light_square\btnPrevious.html" />
+    <Content Include="Admin\images\prettyphoto\light_square\sprite.html" />
+    <Content Include="Admin\images\prettyphoto\light_square\_div style=.html" />
+    <Content Include="Admin\images\prettyphoto\loader.gif" />
+    <Content Include="Admin\images\prettyphoto\sprite.png" />
+    <Content Include="Admin\images\prettyphoto\sprite_next.png" />
+    <Content Include="Admin\images\prettyphoto\sprite_prev.png" />
+    <Content Include="Admin\images\prettyphoto\sprite_x.png" />
+    <Content Include="Admin\images\prettyphoto\sprite_y.png" />
+    <Content Include="Admin\images\select2-spinner.gif" />
+    <Content Include="Admin\images\select2.png" />
+    <Content Include="Admin\images\select2x2.png" />
+    <Content Include="Admin\images\spritemap%402x.html" />
+    <Content Include="Admin\images\spritemap.html" />
+    <Content Include="Admin\images\themeforest.png" />
+    <Content Include="Admin\images\uploadfile.png" />
+    <Content Include="Admin\images\_div style=.html" />
+    <Content Include="Admin\js\bootstrap-timepicker.min.js" />
+    <Content Include="Admin\js\bootstrap-wizard.min.js" />
+    <Content Include="Admin\js\bootstrap-wysihtml5.js" />
+    <Content Include="Admin\js\bootstrap.min.js" />
+    <Content Include="Admin\js\charts.js" />
+    <Content Include="Admin\js\ckeditor\adapters\jquery.js" />
+    <Content Include="Admin\js\ckeditor\ckeditor.js" />
+    <Content Include="Admin\js\codemirror\codemirror.js" />
+    <Content Include="Admin\js\codemirror\formatting.js" />
+    <Content Include="Admin\js\codemirror\mode\javascript.js" />
+    <Content Include="Admin\js\codemirror\mode\xml.js" />
+    <Content Include="Admin\js\colorpicker.js" />
+    <Content Include="Admin\js\custom.js" />
+    <Content Include="Admin\js\dashboard.js" />
+    <Content Include="Admin\js\dataTables.bootstrap.js" />
+    <Content Include="Admin\js\dataTables.responsive.js" />
+    <Content Include="Admin\js\dropzone.min.js" />
+    <Content Include="Admin\js\flot\jquery.flot.categories.min.js" />
+    <Content Include="Admin\js\flot\jquery.flot.crosshair.min.js" />
+    <Content Include="Admin\js\flot\jquery.flot.min.js" />
+    <Content Include="Admin\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="Admin\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="Admin\js\flot\jquery.flot.spline.min.js" />
+    <Content Include="Admin\js\flot\jquery.flot.symbol.min.js" />
+    <Content Include="Admin\js\flot\plugins\curvedLines.js" />
+    <Content Include="Admin\js\fullcalendar.min.js" />
+    <Content Include="Admin\js\gmaps.js" />
+    <Content Include="Admin\js\holder.js" />
+    <Content Include="Admin\js\jquery-1.11.1.min.js" />
+    <Content Include="Admin\js\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Admin\js\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Admin\js\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Admin\js\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Admin\js\jquery-ui-1.10.3.min.js" />
+    <Content Include="Admin\js\jquery.autogrow-textarea.js" />
+    <Content Include="Admin\js\jquery.cookies.js" />
+    <Content Include="Admin\js\jquery.dataTables.min.js" />
+    <Content Include="Admin\js\jquery.gritter.min.js" />
+    <Content Include="Admin\js\jquery.maskedinput.min.js" />
+    <Content Include="Admin\js\jquery.mousewheel.js" />
+    <Content Include="Admin\js\jquery.prettyPhoto.js" />
+    <Content Include="Admin\js\jquery.sparkline.min.js" />
+    <Content Include="Admin\js\jquery.tagsinput.min.js" />
+    <Content Include="Admin\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="Admin\js\jquery.validate.min.js" />
+    <Content Include="Admin\js\menualert.js" />
+    <Content Include="Admin\js\modernizr.min.js" />
+    <Content Include="Admin\js\moment.min.js" />
+    <Content Include="Admin\js\morris.min.js" />
+    <Content Include="Admin\js\pace.min.js" />
+    <Content Include="Admin\js\raphael-2.1.0.min.js" />
+    <Content Include="Admin\js\retina.min.js" />
+    <Content Include="Admin\js\select2.min.js" />
+    <Content Include="Admin\js\toggles.min.js" />
+    <Content Include="Admin\js\wysihtml5-0.3.0.min.js" />
+    <Content Include="Admin\Login.aspx" />
+    <Content Include="Admin\logout.aspx" />
+    <Content Include="Admin\Password.aspx" />
+    <Content Include="Admin\PropertyMain.aspx" />
+    <Content Include="Admin\RentType.aspx" />
+    <Content Include="Admin\signin.aspx" />
+    <Content Include="Admin\Slider.aspx" />
+    <Content Include="Admin\State.aspx" />
+    <Content Include="Admin\Testimonial.aspx" />
+    <Content Include="Admin\Property_Type.aspx" />
+    <Content Include="Client\addproperty.aspx" />
+    <Content Include="Client\Advisor.aspx" />
+    <Content Include="Client\agentregistration.aspx" />
+    <Content Include="Client\agentsprofile.aspx" />
+    <Content Include="Client\agent_signin.aspx" />
+    <Content Include="Client\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Client\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Client\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Client\contact.aspx" />
+    <Content Include="Client\css\colors\red\style.html" />
+    <Content Include="Client\css\fonts\font-awesome\css\font-awesome.css" />
+    <Content Include="Client\css\fonts\font-awesome\fonts\fontawesome-webfont78ce.svg" />
+    <Content Include="Client\css\style.css" />
+    <Content Include="Client\css\theme-animate.css" />
+    <Content Include="Client\css\theme-blog.css" />
+    <Content Include="Client\css\theme-elements.css" />
+    <Content Include="Client\css\theme-map.css" />
+    <Content Include="Client\css\theme-responsive.css" />
+    <Content Include="Client\css\theme.css" />
+    <Content Include="Client\default.aspx" />
+    <Content Include="Client\grid.aspx" />
+    <Content Include="Client\images\agents\agent-1.jpg" />
+    <Content Include="Client\images\agents\agent-icon-10.png" />
+    <Content Include="Client\images\agents\face.png" />
+    <Content Include="Client\images\agents\realtor-512.png" />
+    <Content Include="Client\images\agents\temp-agent.png" />
+    <Content Include="Client\images\bg-page-top.jpg" />
+    <Content Include="Client\images\blog\avatar.png" />
+    <Content Include="Client\images\blog\demo-1.jpg" />
+    <Content Include="Client\images\blog\demo-2.jpg" />
+    <Content Include="Client\images\blog\demo-3.jpg" />
+    <Content Include="Client\images\blog\demo-thumb-1.jpg" />
+    <Content Include="Client\images\blog\demo-thumb-2.jpg" />
+    <Content Include="Client\images\blog\demo-thumb-3.jpg" />
+    <Content Include="Client\images\blog\demo-thumb-4.jpg" />
+    <Content Include="Client\images\blog\demo-thumb-5.jpg" />
+    <Content Include="Client\images\blog\demo-thumb-6.jpg" />
+    <Content Include="Client\images\blog\demo-thumb-7.jpg" />
+    <Content Include="Client\images\blog\side-ad.png" />
+    <Content Include="Client\images\chosen-sprite.png" />
+    <Content Include="Client\images\content\demo-1.jpg" />
+    <Content Include="Client\images\dream-logo.png" />
+    <Content Include="Client\images\icons.png" />
+    <Content Include="Client\images\IMG_8405.JPG" />
+    <Content Include="Client\images\IMG_8420.JPG" />
+    <Content Include="Client\images\IMG_8482.JPG" />
+    <Content Include="Client\images\IMG_8650.JPG" />
+    <Content Include="Client\images\IMG_8655.JPG" />
+    <Content Include="Client\images\logo-34.png" />
+    <Content Include="Client\images\logo.png" />
+    <Content Include="Client\images\makers\marker.png" />
+    <Content Include="Client\Insurance.aspx" />
+    <Content Include="Client\Legal_Procedures.aspx" />
+    <Content Include="Client\Maintainance.aspx" />
+    <Content Include="Client\photo\b4.jpg" />
+    <Content Include="Client\photo\b41.jpg" />
+    <Content Include="Client\photo\b5.jpg" />
+    <Content Include="Client\photo\b51.jpeg" />
+    <Content Include="Client\photo\bath4.jpg" />
+    <Content Include="Client\photo\bath5.jpg" />
+    <Content Include="Client\photo\bed1.jpg" />
+    <Content Include="Client\photo\bed3.jpg" />
+    <Content Include="Client\photo\bed4.jpeg" />
+    <Content Include="Client\photo\h1.jpg" />
+    <Content Include="Client\photo\h2.jpg" />
+    <Content Include="Client\photo\h3.jpeg" />
+    <Content Include="Client\photo\h4.jpg" />
+    <Content Include="Client\photo\h5.jpg" />
+    <Content Include="Client\photo\k1.jpg" />
+    <Content Include="Client\photo\k2.jpg" />
+    <Content Include="Client\photo\k4.jpg" />
+    <Content Include="Client\photo\k5.jpg" />
+    <Content Include="Client\photo\liv3.jpg" />
+    <Content Include="Client\photo\liv4.jpg" />
+    <Content Include="Client\photo\liv5.jpg" />
+    <Content Include="Client\photo\living1.jpg" />
+    <Content Include="Client\photo\living2.jpg" />
+    <Content Include="Client\images\properties\property-1.jpg" />
+    <Content Include="Client\images\properties\property-2.jpg" />
+    <Content Include="Client\images\properties\property-3.jpg" />
+    <Content Include="Client\images\properties\property-4.jpg" />
+    <Content Include="Client\images\properties\property-5.jpg" />
+    <Content Include="Client\images\properties\property-6.jpg" />
+    <Content Include="Client\images\properties\property-detail-1.jpg" />
+    <Content Include="Client\images\properties\property-detail-2.jpg" />
+    <Content Include="Client\images\properties\property-detail-3.jpg" />
+    <Content Include="Client\images\properties\property-detail-4.jpg" />
+    <Content Include="Client\images\properties\property-detail-5.jpg" />
+    <Content Include="Client\images\properties\property-detail-s-1.jpg" />
+    <Content Include="Client\images\properties\property-detail-s-2.jpg" />
+    <Content Include="Client\images\properties\property-detail-s-3.jpg" />
+    <Content Include="Client\images\properties\property-detail-s-4.jpg" />
+    <Content Include="Client\images\properties\property-detail-s-5.jpg" />
+    <Content Include="Client\images\properties\property-featured-1.jpg" />
+    <Content Include="Client\images\properties\property-featured-2.jpg" />
+    <Content Include="Client\images\properties\property-featured-3.jpg" />
+    <Content Include="Client\images\properties\property-featured-4.jpg" />
+    <Content Include="Client\images\properties\property-featured-5.jpg" />
+    <Content Include="Client\images\slides\slider1.jpg" />
+    <Content Include="Client\images\slides\slider2.jpg" />
+    <Content Include="Client\images\slides\slider3.jpg" />
+    <Content Include="Client\js\contact.js" />
+    <Content Include="Client\js\theme.js" />
+    <Content Include="Client\js\theme.plugins.js" />
+    <Content Include="Client\list-map.aspx" />
+    <Content Include="Client\list.aspx" />
+    <Content Include="Client\ouragents.aspx" />
+    <Content Include="Client\property-detail.aspx" />
+    <Content Include="Client\property-detail_1.aspx" />
+    <Content Include="Client\property-detail_2.aspx" />
+    <Content Include="Client\property-detail_3.aspx" />
+    <Content Include="Client\property-detail_4.aspx" />
+    <Content Include="Client\property-detail_5.aspx" />
+    <Content Include="Client\signout.aspx" />
+    <Content Include="Client\style-switcher\css\style-switcher.css" />
+    <Content Include="Client\style-switcher\js\switcher.js" />
+    <Content Include="Client\Userupdate.aspx" />
+    <Content Include="Client\user_login.aspx" />
+    <Content Include="Client\user_registration.aspx" />
+    <Content Include="Client\vendor\chosen\chosen-sprite%402x.png.png" />
+    <Content Include="Client\vendor\chosen\chosen-sprite.png" />
+    <Content Include="Client\vendor\chosen\chosen.css" />
+    <Content Include="Client\vendor\chosen\chosen.jquery.min.js" />
+    <Content Include="Client\vendor\flexslider\flexslider.css" />
+    <Content Include="Client\vendor\flexslider\fonts\flexslider-icon.svg" />
+    <Content Include="Client\vendor\flexslider\jquery.flexslider-min.js" />
+    <Content Include="Client\vendor\gmap\gmap3.infobox.min.js" />
+    <Content Include="Client\vendor\gmap\markerclusterer.min.js" />
+    <Content Include="Client\vendor\gmap\properties.js" />
+    <Content Include="Client\vendor\gmap\script.js" />
+    <Content Include="Client\vendor\gmap\variables.js" />
+    <Content Include="Client\vendor\jquery.gmap.js" />
+    <Content Include="Client\vendor\jquery.min.js" />
+    <Content Include="Client\vendor\jquery.validation\jquery.validation.js" />
+    <Content Include="Client\vendor\masonry\imagesloaded.pkgd.min.js" />
+    <Content Include="Client\vendor\masonry\masonry.pkgd.min.js" />
+    <Content Include="Client\vendor\owl-carousel\AjaxLoader.html" />
+    <Content Include="Client\vendor\owl-carousel\grabbing.html" />
+    <Content Include="Client\vendor\owl-carousel\owl.carousel.css" />
+    <Content Include="Client\vendor\owl-carousel\owl.carousel.js" />
+    <Content Include="Client\vendor\owl-carousel\owl.theme.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin_Master.Master.cs">
+      <DependentUpon>Admin_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Master.Master.designer.cs">
+      <DependentUpon>Admin_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Area.aspx.cs">
+      <DependentUpon>Area.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Area.aspx.designer.cs">
+      <DependentUpon>Area.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\buttons.aspx.cs">
+      <DependentUpon>buttons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\buttons.aspx.designer.cs">
+      <DependentUpon>buttons.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\changepassword.aspx.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\changepassword.aspx.designer.cs">
+      <DependentUpon>changepassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\City.aspx.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\City.aspx.designer.cs">
+      <DependentUpon>City.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Company_Profile.aspx.cs">
+      <DependentUpon>Company_Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Company_Profile.aspx.designer.cs">
+      <DependentUpon>Company_Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Country.aspx.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Country.aspx.designer.cs">
+      <DependentUpon>Country.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Password.aspx.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Password.aspx.designer.cs">
+      <DependentUpon>Password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PropertyMain.aspx.cs">
+      <DependentUpon>PropertyMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PropertyMain.aspx.designer.cs">
+      <DependentUpon>PropertyMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\RentType.aspx.cs">
+      <DependentUpon>RentType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\RentType.aspx.designer.cs">
+      <DependentUpon>RentType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\signin.aspx.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\signin.aspx.designer.cs">
+      <DependentUpon>signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Slider.aspx.cs">
+      <DependentUpon>Slider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Slider.aspx.designer.cs">
+      <DependentUpon>Slider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\State.aspx.cs">
+      <DependentUpon>State.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\State.aspx.designer.cs">
+      <DependentUpon>State.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Testimonial.aspx.cs">
+      <DependentUpon>Testimonial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Testimonial.aspx.designer.cs">
+      <DependentUpon>Testimonial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\addproperty.aspx.cs">
+      <DependentUpon>addproperty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\addproperty.aspx.designer.cs">
+      <DependentUpon>addproperty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Advisor.aspx.cs">
+      <DependentUpon>Advisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Advisor.aspx.designer.cs">
+      <DependentUpon>Advisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\agentregistration.aspx.cs">
+      <DependentUpon>agentregistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\agentregistration.aspx.designer.cs">
+      <DependentUpon>agentregistration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\agentsprofile.aspx.cs">
+      <DependentUpon>agentsprofile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\agentsprofile.aspx.designer.cs">
+      <DependentUpon>agentsprofile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\agent_signin.aspx.cs">
+      <DependentUpon>agent_signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\agent_signin.aspx.designer.cs">
+      <DependentUpon>agent_signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Client.Master.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Client.Master.designer.cs">
+      <DependentUpon>Client.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Client\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\default.aspx.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\default.aspx.designer.cs">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\grid.aspx.cs">
+      <DependentUpon>grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\grid.aspx.designer.cs">
+      <DependentUpon>grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Insurance.aspx.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Insurance.aspx.designer.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Legal_Procedures.aspx.cs">
+      <DependentUpon>Legal_Procedures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Legal_Procedures.aspx.designer.cs">
+      <DependentUpon>Legal_Procedures.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\list-map.aspx.cs">
+      <DependentUpon>list-map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\list-map.aspx.designer.cs">
+      <DependentUpon>list-map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\list.aspx.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\list.aspx.designer.cs">
+      <DependentUpon>list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Maintainance.aspx.cs">
+      <DependentUpon>Maintainance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Maintainance.aspx.designer.cs">
+      <DependentUpon>Maintainance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\ouragents.aspx.cs">
+      <DependentUpon>ouragents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\ouragents.aspx.designer.cs">
+      <DependentUpon>ouragents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\property-detail.aspx.cs">
+      <DependentUpon>property-detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\property-detail.aspx.designer.cs">
+      <DependentUpon>property-detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\property-detail_1.aspx.cs">
+      <DependentUpon>property-detail_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\property-detail_1.aspx.designer.cs">
+      <DependentUpon>property-detail_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\property-detail_2.aspx.cs">
+      <DependentUpon>property-detail_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\property-detail_2.aspx.designer.cs">
+      <DependentUpon>property-detail_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\property-detail_3.aspx.cs">
+      <DependentUpon>property-detail_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\property-detail_3.aspx.designer.cs">
+      <DependentUpon>property-detail_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\property-detail_4.aspx.cs">
+      <DependentUpon>property-detail_4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\property-detail_4.aspx.designer.cs">
+      <DependentUpon>property-detail_4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\property-detail_5.aspx.cs">
+      <DependentUpon>property-detail_5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\property-detail_5.aspx.designer.cs">
+      <DependentUpon>property-detail_5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\signout.aspx.cs">
+      <DependentUpon>signout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\signout.aspx.designer.cs">
+      <DependentUpon>signout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\Userupdate.aspx.cs">
+      <DependentUpon>Userupdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\Userupdate.aspx.designer.cs">
+      <DependentUpon>Userupdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\user_login.aspx.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\user_login.aspx.designer.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client\user_registration.aspx.cs">
+      <DependentUpon>user_registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client\user_registration.aspx.designer.cs">
+      <DependentUpon>user_registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Admin\Property_Type.aspx.cs">
+      <DependentUpon>Property_Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Property_Type.aspx.designer.cs">
+      <DependentUpon>Property_Type.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\debug.log" />
+    <Content Include="Admin\fonts\fontawesome-webfont862f.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont862f.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont862f.woff" />
+    <Content Include="Admin\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Admin\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Admin\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Admin\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Admin\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Admin\fonts\weathericons-regular-webfontd41d.eot" />
+    <Content Include="Admin\Admin_Master.Master" />
+    <Content Include="Client\Client.Master" />
+    <Content Include="Client\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Client\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Client\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Client\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Client\css\fonts\font-awesome\fonts\fontawesome-webfont78ce.eot" />
+    <Content Include="Client\css\fonts\font-awesome\fonts\fontawesome-webfont78ce.ttf" />
+    <Content Include="Client\css\fonts\font-awesome\fonts\fontawesome-webfont78ce.woff" />
+    <Content Include="Client\css\fonts\font-awesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="Client\images\slides\Thumbs.db" />
+    <Content Include="Client\images\Thumbs.db" />
+    <Content Include="Client\vendor\flexslider\fonts\flexslider-icon.eot" />
+    <Content Include="Client\vendor\flexslider\fonts\flexslider-icon.ttf" />
+    <Content Include="Client\vendor\flexslider\fonts\flexslider-icon.woff" />
+    <Content Include="Client\vendor\flexslider\fonts\flexslider-icond41d.eot" />
+    <Content Include="Client\photo\Thumbs.db" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BAL\BAL.csproj">
+      <Project>{7482aad9-34b2-46bf-b20f-569e51e1aa1f}</Project>
+      <Name>BAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{ad5c879d-fa5c-495b-8e75-bbf8caae218a}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8339/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
